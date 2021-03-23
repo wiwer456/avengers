@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Мстители: Финал (2019)</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		/* див с фоном картинкой */
+		.bg {
+			background-image: url(https://www.dropbox.com/s/4yxg2ecwdapf6ot/bg.jpg?dl=1);
+			background-size: 100% 100%;
+			height: 800px;
+			width: 1360px;
+			padding-top: 170px;
+			font-size: 11px;
+		}
+		/* оранжевый текст */
+		.text-orange {
+			color: #f60;
+		}
+		/* див трейлера */
+		.trailer {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg" style="">
+		<div class="bg-light col-6 mx-auto pt-4" style="height: 657px;">
+			<!-- описание фильма -->
+			<div class="main">
+				<div class="row">
+					<!-- левая колонка -->
+					<div class="col-4">
+						<!-- див для картинки -->
+						<div class="col-12">
+							<img src="" alt="" class="logo w-100">
+						</div>
+					</div>
+					<!-- правая колонка -->
+					<div class="col-8">
+						<!-- див для названия -->
+						<div>
+							<h5 class="name"></h5>
+							<span class="text-secondary engName"></span>
+						</div>
+						<div>
+							<!-- див для года -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">год</span>
+									</div>
+									<div class="col-9">
+										<span class="year"></span>
+									</div>
+								</div>
+							</div>
+							<!-- див для страны -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">страна</span>
+									</div>
+									<div class="col-9">
+										<span class="country"></span>
+									</div>
+								</div>
+							</div>
+							<!-- див для слогана -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">слоган</span>
+									</div>
+									<div class="col-9">
+										<span class="slogan"></span>
+									</div>
+								</div>
+							</div>
+							<!-- див для режиссера -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">режиссер</span>
+									</div>
+									<div class="col-9">
+										<span class="director"></span>
+									</div>
+								</div>
+							</div>
+							<!-- див для жанра -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">жанр</span>
+									</div>
+									<div class="col-9">
+										<span class="genre"></span>
+									</div>
+								</div>
+							</div>
+							<!-- див для времени -->
+							<div class="border-bottom py-1">
+								<div class="row">
+									<div class="col-3">
+										<span class="text-orange">время</span>
+									</div>
+									<div class="col-9">
+										<span class="time"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<!-- трейлер фильма -->
+			<div class="trailer embed-responsive embed-responsive-16by9">
+				<iframe class="video" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//let name = 'Мстители Финал'
+		//let year = 2019;
+		//let img = 'logo.jpg'
+
+
+		//let name1 = '1917'
+		//let year1 = 2020;
+		//let img1 = 'logo1.jpg'
+		let movie = {
+			name: 'Мстители Финал',
+			year: 2019,
+			img: 'logo.jpg',
+			country: 'США',
+			slogan: 'Avenge the fallen',
+			director: 'Энтони Руссо',
+			genre: 'фантастика',
+			time: 181,
+			engName: 'Avengers: Endgame',
+
+
+
+			showtrailer: function(){
+				let main = document.querySelector('.main')
+				let tr = document.querySelector('.trailer')
+				main.style.display = 'none'
+				tr.style.display = 'block'
+			}
+		}
+
+		let movie1 = {
+			name: '1917',
+			year: 2020,
+			img: 'logo1.png'
+		}
+
+		
+
+
+		let nm = document.querySelector('.name')
+		let lg = document.querySelector('.logo')
+		let ye = document.querySelector('.year')
+		let cy = document.querySelector('.country')
+		let sn = document.querySelector('.slogan')
+		let dr = document.querySelector('.director')
+		let ge = document.querySelector('.genre')
+		let tm = document.querySelector('.time')
+		let en = document.querySelector('.engName')
+
+
+
+		
+	
+		lg.src = movie.img
+		ye.innerHTML = movie.year
+		nm.innerHTML = movie.name
+		cy.innerHTML = movie.country
+		sn.innerHTML = movie.slogan
+		dr.innerHTML = movie.director
+		ge.innerHTML = movie.genre
+		tm.innerHTML = movie.time
+		en.innerHTML = movie.engName
+
+
+		/* Название классов:
+			1. logo
+			2. name
+			3. engName
+			4. year
+			5. country
+			6. slogan
+			7. director
+			8. genre
+			9. time
+			10. video
+			11. main
+			12. trailer */
+	</script>
+</body>
+</html>
